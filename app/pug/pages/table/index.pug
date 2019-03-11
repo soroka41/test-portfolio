@@ -1,0 +1,65 @@
+extends ../../layout.pug
+block main
+  .wrapper-table-block
+    .container
+      .row
+        .col-lg-12
+          h1.display-4 Table CRUD
+          br
+          a(href="/") На главную
+          br
+          br
+          .pull-right
+            button.btn.btn-success(type="button" data-toggle="modal" data-target="#create-item") Create Item
+          br
+          table.table
+            thead
+              tr
+                td Id
+                td Title
+                td Discription
+                td Created_at
+                td Updated_at
+                td Action
+            tbody
+          ul#pagination.pagination-sm
+          #create-item.modal.fade(tabindex='-1', role='dialog', aria-labelledby='myModalLabel')
+            .modal-dialog(role='document')
+              .modal-content
+                .modal-header
+                  h4#myModalLabel.modal-title Create Item
+                  button.close(type='button', data-dismiss='modal', aria-label='Close')
+                    span(aria-hidden='true') ×
+                .modal-body
+                  form(data-toggle='validator', action='/php/create.php', method='POST')
+                    .form-group
+                      label.control-label(for='title') Title:
+                      input.form-control(type='text', name='title', data-error='Please enter title.', required='')
+                      .help-block.with-errors
+                    .form-group
+                      label.control-label(for='title') Description:
+                      textarea.form-control(name='description', data-error='Please enter description.', required='')
+                      .help-block.with-errors
+                    .form-group
+                      button.btn.crud-submit.btn-success(type='submit') Submit
+          #edit-item.modal.fade(tabindex='-1', role='dialog', aria-labelledby='myModalLabel')
+            .modal-dialog(role='document')
+              .modal-content
+                .modal-header
+                  h4#myModalLabel.modal-title Edit Item
+                  button.close(type='button', data-dismiss='modal', aria-label='Close')
+                    span(aria-hidden='true') ×
+                  
+                .modal-body
+                  form(data-toggle='validator', action='/php/update.php', method='put')
+                    input.edit-id(type='hidden', name='id')
+                    .form-group
+                      label.control-label(for='title') Title:
+                      input.form-control(type='text', name='title', data-error='Please enter title.', required='')
+                      .help-block.with-errors
+                    .form-group
+                      label.control-label(for='title') Description:
+                      textarea.form-control(name='description', data-error='Please enter description.', required='')
+                      .help-block.with-errors
+                    .form-group
+                      button.btn.btn-success.crud-submit-edit(type='submit') Submit

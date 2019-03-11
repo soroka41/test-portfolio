@@ -1,0 +1,749 @@
+@import "vars"
+@import "fonts"
+@import "libs"
+
+::placeholder
+	color: #666
+
+::selection
+	background-color: #f6f6f6
+	color: $dark
+
+html, body
+	height: 100%
+
+body
+	font-size: 16px
+	min-width: 320px
+	position: relative
+	line-height: 1.65
+	font-family: $font-family-base
+	overflow-x: hidden
+	input, textarea
+			border: #666 1px solid
+			outline: none
+			&:focus:required:invalid
+				border-color: red
+			&:required:valid
+				border-color: green
+
+.img-responsive
+	display: block
+	max-width: 100%
+	height: auto
+
+.active
+	a
+		background-color: $color-accent
+
+.text-center
+	text-align: center
+
+.portfolio-active
+	visibility: visible
+
+
+.wrapper-main-bg-block-index
+	width: 100%
+	background-color: #f6f6f6
+
+.button-custom
+	background-color: $dark
+	border-bottom: 2px solid $color-accent
+	border-top: inherit
+	border-left: inherit
+	border-right: inherit
+	color: $default-color
+	font-size: 15px
+	width: 120px
+	height: 35px
+	
+//header
+.wrapper-main-block-header
+	width: 100%
+	height: 160px
+	background-color: inherit
+	._wrapper-main-block-header-img
+		padding-top: 20px
+		img
+			margin-left: 120px
+	._wrapper-main-block-header-menu
+		width: 100%
+		height: 160px
+		display: flex
+		justify-content: space-around
+		ul
+			padding: 0
+			margin-right: 105px
+			margin-bottom: 0
+			text-align: right
+			display: flex
+			flex-direction: row
+			width: 100%
+			li
+				list-style-type: none
+				margin: auto
+				height: 60px
+				width: 100%
+				display: flex
+				align-items: center
+				justify-content: flex-end
+				a
+					text-transform: uppercase
+					text-decoration: none
+					color: $dark
+					padding: 15px 5px 15px 5px
+					&:hover
+						background-color: $color-accent
+
+//portfolio slider
+.wrapper-block-slider-portfolio
+	width: 100%
+	min-height: 150px
+	background-image: url('/img/slider-img-header/slider_bg.jpg')
+	background-size: cover
+	background-position: center
+	h1
+		color: $color-accent
+		background-color: $color-text
+		display: inline-block
+		text-transform: uppercase
+		font-size: 35px
+		font-weight: 400
+		width: 320px
+		padding: 15px
+		margin-left: 120px
+		margin-top: 40px
+		margin-bottom: 40px
+
+//section text
+.wrapper-block-section-text
+	width: 100%
+	min-height: 310px
+	._wrapper-block-text
+		width: 100%
+		text-align: center
+		h2
+			text-transform: uppercase
+			font-size: 35px
+			font-weight: 400
+			margin-top: 80px
+			color: $color-text
+		p
+			font-size: 24px
+			color: $color-text
+	._wrapper-block-section-search-isotope
+			width: 100%
+			text-align-last: left
+			display: flex
+			justify-content: center
+			align-items: center
+			padding-top: 60px
+			ul
+				padding: 0
+				width: 100%
+				margin-left: 120px
+				margin-bottom: 40px
+				li
+					list-style-type: none
+					display: inline-block
+					a
+						font-size: 24px
+						color: $color-text
+						text-decoration: none
+						padding: 10px 15px 10px 15px
+						&:hover
+							background-color: $color-accent
+
+//portfolio
+.wrapper-block-section-portfolio
+._wrapper-block-portfolio-img
+	margin: 10px
+	.img-responsive
+		width: 100%
+._wrapper-block-section-work
+	margin-bottom: 20px
+.change-image-0, .change-image-1, .change-image-2, .change-image-3, .change-image-4, .change-image-5, .change-image-6, .change-image-7, .change-image-8
+	width: 100%
+	height: 350px
+	display: block
+	position: relative
+	background-repeat: no-repeat
+	background-position: center
+	background-size: cover
+.change-image-0
+	background-image: url('/img/img-galary/1.jpg')
+	position: relative
+	.mask-button
+		position: absolute
+		top: 0
+		left: 0
+		bottom: 0
+		right: 0
+		width: 100%
+		height: 100%
+		display: flex
+		justify-content: center
+		align-items: center
+		background-color: rgba(66, 65, 71, 0.7)
+		visibility: hidden
+		.button
+			padding: 20px
+			background-color: inherit
+			border: 1px solid $default-color
+			span
+				color: $default-color
+				text-transform: uppercase
+				font-weight: 600
+				background: inherit
+	&:hover
+		background-image: url('/img/img-galary/9.jpg')
+		.mask-button
+			visibility: visible
+			.button
+				&:hover
+					background-color: $color-accent
+					border: 1px solid $color-accent
+					span
+						color: $color-text
+						font-weight: 600
+.change-image-1
+	background-image: url('/img/img-galary/2.jpg')
+	position: relative
+	.mask-button
+		position: absolute
+		top: 0
+		left: 0
+		bottom: 0
+		right: 0
+		width: 100%
+		height: 100%
+		display: flex
+		justify-content: center
+		align-items: center
+		background-color: rgba(66, 65, 71, 0.7)
+		visibility: hidden
+		.button
+			padding: 20px
+			background-color: inherit
+			border: 1px solid $default-color
+			span
+				color: $default-color
+				text-transform: uppercase
+				font-weight: 600
+				background: inherit
+	&:hover
+		background-image: url('/img/img-galary/8.jpg')
+		.mask-button
+			visibility: visible
+			.button
+				&:hover
+					background-color: $color-accent
+					border: 1px solid $color-accent
+					span
+						color: $color-text
+						font-weight: 600
+.change-image-2
+	background-image: url('/img/img-galary/3.jpg')
+	position: relative
+	.mask-button
+		position: absolute
+		top: 0
+		left: 0
+		bottom: 0
+		right: 0
+		width: 100%
+		height: 100%
+		display: flex
+		justify-content: center
+		align-items: center
+		background-color: rgba(66, 65, 71, 0.7)
+		visibility: hidden
+		.button
+			padding: 20px
+			background-color: inherit
+			border: 1px solid $default-color
+			span
+				color: $default-color
+				text-transform: uppercase
+				font-weight: 600
+				background: inherit
+	&:hover
+		background-image: url('/img/img-galary/7.jpg')
+		.mask-button
+			visibility: visible
+			.button
+				&:hover
+					background-color: $color-accent
+					border: 1px solid $color-accent
+					span
+						color: $color-text
+						font-weight: 600
+.change-image-3
+	background-image: url('/img/img-galary/4.jpg')
+	position: relative
+	.mask-button
+		position: absolute
+		top: 0
+		left: 0
+		bottom: 0
+		right: 0
+		width: 100%
+		height: 100%
+		display: flex
+		justify-content: center
+		align-items: center
+		background-color: rgba(66, 65, 71, 0.7)
+		visibility: hidden
+		.button
+			padding: 20px
+			background-color: inherit
+			border: 1px solid $default-color
+			span
+				color: $default-color
+				text-transform: uppercase
+				font-weight: 600
+				background: inherit
+	&:hover
+		background-image: url('/img/img-galary/6.jpg')
+		.mask-button
+			visibility: visible
+			.button
+				&:hover
+					background-color: $color-accent
+					border: 1px solid $color-accent
+					span
+						color: $color-text
+						font-weight: 600
+.change-image-4
+	background-image: url('/img/img-galary/5.jpg')
+	position: relative
+	.mask-button
+		position: absolute
+		top: 0
+		left: 0
+		bottom: 0
+		right: 0
+		width: 100%
+		height: 100%
+		display: flex
+		justify-content: center
+		align-items: center
+		background-color: rgba(66, 65, 71, 0.7)
+		visibility: hidden
+		.button
+			padding: 20px
+			background-color: inherit
+			border: 1px solid $default-color
+			span
+				color: $default-color
+				text-transform: uppercase
+				font-weight: 600
+				background: inherit
+	&:hover
+		background-image: url('/img/img-galary/1.jpg')
+		.mask-button
+			visibility: visible
+			.button
+				&:hover
+					background-color: $color-accent
+					border: 1px solid $color-accent
+					span
+						color: $color-text
+						font-weight: 600
+.change-image-5
+	background-image: url('/img/img-galary/6.jpg')
+	&:hover
+		background-image: url('/img/img-galary/4.jpg')
+.change-image-6
+	background-image: url('/img/img-galary/7.jpg')
+	position: relative
+	.mask-button
+		position: absolute
+		top: 0
+		left: 0
+		bottom: 0
+		right: 0
+		width: 100%
+		height: 100%
+		display: flex
+		justify-content: center
+		align-items: center
+		background-color: rgba(66, 65, 71, 0.7)
+		visibility: hidden
+		.button
+			padding: 20px
+			background-color: inherit
+			border: 1px solid $default-color
+			span
+				color: $default-color
+				text-transform: uppercase
+				font-weight: 600
+				background: inherit
+	&:hover
+		background-image: url('/img/img-galary/8.jpg')
+		.mask-button
+			visibility: visible
+			.button
+				&:hover
+					background-color: $color-accent
+					border: 1px solid $color-accent
+					span
+						color: $color-text
+						font-weight: 600
+.change-image-7
+	background-image: url('/img/img-galary/8.jpg')
+	position: relative
+	.mask-button
+		position: absolute
+		top: 0
+		left: 0
+		bottom: 0
+		right: 0
+		width: 100%
+		height: 100%
+		display: flex
+		justify-content: center
+		align-items: center
+		background-color: rgba(66, 65, 71, 0.7)
+		visibility: hidden
+		.button
+			padding: 20px
+			background-color: inherit
+			border: 1px solid $default-color
+			span
+				color: $default-color
+				text-transform: uppercase
+				font-weight: 600
+				background: inherit
+	&:hover
+		background-image: url('/img/img-galary/1.jpg')
+		.mask-button
+			visibility: visible
+			.button
+				&:hover
+					background-color: $color-accent
+					border: 1px solid $color-accent
+					span
+						color: $color-text
+						font-weight: 600
+.change-image-8
+	background-image: url('/img/img-galary/9.jpg')
+	position: relative
+	.mask-button
+		position: absolute
+		top: 0
+		left: 0
+		bottom: 0
+		right: 0
+		width: 100%
+		height: 100%
+		display: flex
+		justify-content: center
+		align-items: center
+		background-color: rgba(66, 65, 71, 0.7)
+		visibility: hidden
+		.button
+			padding: 20px
+			background-color: inherit
+			border: 1px solid $default-color
+			span
+				color: $default-color
+				text-transform: uppercase
+				font-weight: 600
+				background: inherit
+	&:hover
+		background-image: url('/img/img-galary/3.jpg')
+		.mask-button
+			visibility: visible
+			.button
+				&:hover
+					background-color: $color-accent
+					border: 1px solid $color-accent
+					span
+						color: $color-text
+						font-weight: 600
+.portfolio-active
+	img
+		position: relative
+	.mask
+		position: absolute
+		width: 100%
+		height: 100%
+		top: 0
+		left: 0
+		right: 0
+		bottom: 0
+		background-color: rgba(255, 234, 0, 0.5)
+		display: flex
+		justify-content: center
+		align-items: center
+		visibility: visible
+		.grew-botton
+			width: 150px
+			height: 150px
+			display: flex
+			justify-content: center
+			align-items: center
+			background-color: rgba(66, 65, 71, 0.7)
+	&:hover
+		.mask
+			visibility: visible
+
+//footer
+.wrapper-block-section-footer
+	width: 100%
+	margin-top: 60px
+	padding-right: 120px
+	padding-left: 120px
+	background-color: $color-text
+	._wrapper-block-footer-main-1
+		padding-top: 25px
+		padding-bottom: 20px
+		width: 100%
+		height: 100%
+		.insert-one, .insert-two, .insert-free
+			._wrapper-footer-image-stream
+				margin: 2px
+			h3
+				font-size: 18px
+				font-weight: bold
+				color: $default-color
+				margin-bottom: 25px
+		.insert-two
+			margin-bottom: 10%
+			ul
+				margin: 0
+				padding: 0
+				li
+					list-style-type: none
+					p
+						font-size: 14px
+						color: $default-color
+						font-weight: bold
+				.button-li
+					margin-top: 30px
+					margin-bottom: 40px
+		.insert-free
+			margin-bottom: 10px
+			._wrapper-block-photo-stream
+				display: flex
+				justify-content: left
+				align-items: center
+				._wrapper-footer-image-stream
+					.img-responsive
+						width: 130px
+						height: 70px
+	._wrapper-block-footer-main-contact
+		padding-top: 25px
+		padding-bottom: 20px
+		h3
+			font-size: 18px
+			font-weight: bold
+			color: $default-color
+			margin-bottom: 25px
+		.wrapper-block-follow
+			ul
+				li
+					h5
+						color: $default-color
+						font-weight: bold
+					p
+						color: $default-color
+						font-weight: bold
+						font-size: 14px
+					form
+						input
+							width: 70%
+							background-color: inherit
+							color: $default-color
+							background-color: $color-text
+							border-bottom: 2px solid $color-accent
+							border-top: inherit
+							border-left: inherit
+							border-right: inherit
+		ul
+			padding: 0
+			margin-top: 50px
+			li
+				list-style-type: none
+				.wrapper-li-contact-block-main
+					width: 100%
+					display: flex
+					justify-content: flex-start
+					text-align: left
+					flex-direction: row
+					align-items: center
+					height: 50px
+					._wrapper-block-icons
+						img
+							width: 28px
+							height: 28px
+							margin: 0 auto
+					._wrapper-text-contact
+						p
+							margin: 0
+							padding-left: 15px
+							font-size: 13px
+							font-weight: 400
+							line-height: 20px
+							font-family: $font-family-base
+							font-weight: bold
+							color: $default-color
+							span
+								color: $color-accent
+								font-size: 14px
+								display: inline-block
+								padding: 0
+								font-weight: bold
+						span
+							padding-left: 10px
+							font-size: 8px
+							font-weight: 400
+							color: $color-accent
+							display: block
+							margin-top: -3px
+	._wrapper-block-footer-main
+		padding-top: 25px
+		padding-bottom: 20px
+		h3
+			font-size: 18px
+			font-weight: bold
+			color: $default-color
+			margin-bottom: 25px
+		.wrapper-block-footer-sharing-button
+			display: flex
+			align-items: center
+			text-align: left
+			margin-top: 40px
+			._block-text
+				h5
+					color: $default-color
+					margin: 0 auto
+					margin-right: 10px
+					font-weight: bold
+			._block-button-sharing
+				ul
+					padding: 0
+					margin: 0
+					li
+						display: inline-block
+						margin: 0
+						img
+							margin: 1px
+							width: 30px
+							height: 30px
+		ul
+			padding: 0
+			margin: 0
+			
+			li
+				list-style-type: none
+				color: $default-color
+				margin-bottom: 20px
+				.wrapper-li-twit-block-main
+					width: 100%
+					display: flex
+					justify-content: flex-start
+					text-align: left
+					min-height: 40px
+					._wrapper-block-icons
+						img
+							width: 26px
+					._wrapper-text-twit
+						p
+							margin: 0
+							padding-left: 15px
+							font-size: 13px
+							font-weight: 400
+							line-height: 20px
+							font-family: $font-family-base
+							font-weight: bold
+							span
+								color: $color-accent
+								font-size: 14px
+								display: inline-block
+								padding: 0
+								font-weight: bold
+						span
+							padding-left: 15px
+							font-size: 8px
+							font-weight: bold
+							color: $color-accent
+							display: block
+							margin-top: -3px
+		._wrapper-footer-image-stream
+			margin: 1px
+			img
+				width: 100%
+.section-footer-last
+	background-color: $dark
+	width: 100%
+	height: 70px
+
+
+	ul
+		li
+			p
+				font-size: 14px
+				font-weight: bold
+
+.follow-form
+	input:-webkit-autofill,
+	input:-webkit-autofill:hover,
+	input:-webkit-autofill:focus,
+	input:-webkit-autofill:active
+		-webkit-text-fill-color: $color-text important
+		-webkit-box-shadow: 0 0 0 30px $color-text inset
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active
+	-webkit-text-fill-color: $color-text important
+	-webkit-box-shadow: 0 0 0 30px $color-text inset
+
+.section-footer-last
+	padding-left: 120px
+	padding-right: 120px
+	width: 100%
+	height: 70px
+	._wrapper-block-footer-last-p
+		display: flex
+		justify-content: flex-start
+		align-items: center
+		width: 100%
+		height: 70px
+		p
+			color: $default-color
+			margin: 0
+			font-size: 14px
+			font-weight: bold
+	._wrapper-block-footer-last
+		display: flex
+		justify-content: space-around
+		width: 100%
+		height: 70px
+		ul
+			display: flex
+			flex-direction: row
+			margin: 0
+			padding: 0
+			width: 100%
+			text-align: right
+			li
+				list-style-type: none
+				margin: auto
+				width: 100%
+				a
+					color: $default-color
+					text-decoration: none
+					font-size: 16px
+					text-transform: uppercase
+					&:hover
+						text-decoration: none
+
+
+//media
+@import "media" // Always at the end
+
